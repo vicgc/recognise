@@ -2,6 +2,7 @@ language: cpp
 
 before_install:
   - echo "START"
+  - sudo apt-get update
 
 before_script:
   - chmod +x runner.sh
