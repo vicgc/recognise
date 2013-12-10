@@ -1,4 +1,5 @@
-Recognise
+Recognise [![Build
+Status](https://travis-ci.org/ianjuma/recognise.png)](https://travis-ci.org/ianjuma/recognise)
 =========
 
 OpenCV tutorial on Facial detection and recognition
