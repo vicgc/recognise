@@ -13,9 +13,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-13, USA
 
-CC	    = $(shell which gcc)
+CC	    = $(shell which clang-3.3)
 LIBFLAGS    = -lm
 THREADFLAGS = -pthread
+DEPS = `pkg-config --cflags --libs opencv`
 OPTFLAGS    = -g -o0
 LINTFLAGS   = -Wall -pedantic
 CFLAGS	    = $(THREADFLAGS) $(LINTFLAGS) -std=c99
@@ -23,9 +24,9 @@ CFLAGS	    = $(THREADFLAGS) $(LINTFLAGS) -std=c99
 
 all: build
 
-build: src/new-terminal.c
+build: src/cam.cpp
 	echo "Building program ... "
-	$(CC) $(THREADFLAGS) -o bin/new src/new-terminal.c
+	$(CC) $(DEPS) $(THREADFLAGS) -o bin/new src/cam.cpp
 	echo "Done :)"
 
 
