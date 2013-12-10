@@ -4,11 +4,11 @@ before_install:
   - echo "START"
   - sudo apt-get update
   - sudo apt-get install build-essential
-  - ./opencv.sh
+  - ./get-deps.sh
 
 before_script:
   - chmod +x runner.sh
-  - chmox +x opencv.sh
+  - chmox +x get-deps.sh
 
 install: make get-deps
 # install: true
