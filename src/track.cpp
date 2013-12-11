@@ -42,64 +42,63 @@ void trackObject(IplImage* imgThresh){
 }
 
 
-int main(){
+int main() {
    
-      CvCapture* capture =0;       
-      capture = cvCaptureFromCAM(0);
-      if(!capture){
-         printf("Capture failure\n");
-         return -1;
-      }
-      
-      IplImage* frame=0;
-      frame = cvQueryFrame(capture);           
-      if(!frame) return -1;
+    CvCapture* capture =0;       
+    capture = cvCaptureFromCAM(0);
+    if(!capture){
+       printf("Capture failure\n");
+       return -1;
+    }
+    
+    IplImage* frame=0;
+    frame = cvQueryFrame(capture);           
+    if(!frame) return -1;
    
-     //create a blank image and assigned to 'imgTracking' which has the same size of original video
-     imgTracking=cvCreateImage(cvGetSize(frame),IPL_DEPTH_8U, 3);
-     cvZero(imgTracking); //covert the image, 'imgTracking' to black
+   //create a blank image and assigned to 'imgTracking' which has the same size of original video
+   imgTracking=cvCreateImage(cvGetSize(frame),IPL_DEPTH_8U, 3);
+   cvZero(imgTracking); //covert the image, 'imgTracking' to black
 
-     cvNamedWindow("Video");     
-     cvNamedWindow("Ball");
+   cvNamedWindow("Video");     
+   cvNamedWindow("Ball");
 
       //iterate through each frames of the video     
-      while(true){
-
-            frame = cvQueryFrame(capture);           
-            if(!frame) break;
-            frame=cvCloneImage(frame); 
-            
-            cvSmooth(frame, frame, CV_GAUSSIAN,3,3); //smooth the original image using Gaussian kernel
-
-            IplImage* imgHSV = cvCreateImage(cvGetSize(frame), IPL_DEPTH_8U, 3); 
-            cvCvtColor(frame, imgHSV, CV_BGR2HSV); //Change the color format from BGR to HSV
-            IplImage* imgThresh = GetThresholdedImage(imgHSV);
+   while(true) {
+      frame = cvQueryFrame(capture);
+      if(!frame) break;
+      frame=cvCloneImage(frame);
           
-            cvSmooth(imgThresh, imgThresh, CV_GAUSSIAN,3,3); //smooth the binary image using Gaussian kernel
-            
-           //track the possition of the ball
-           trackObject(imgThresh);
+      cvSmooth(frame, frame, CV_GAUSSIAN,3,3); //smooth the original image using Gaussian kernel
 
-            // Add the tracking image and the frame
-           cvAdd(frame, imgTracking, frame);
+          IplImage* imgHSV = cvCreateImage(cvGetSize(frame), IPL_DEPTH_8U, 3);
+          cvCvtColor(frame, imgHSV, CV_BGR2HSV); //Change the color format from BGR to HSV
+          IplImage* imgThresh = GetThresholdedImage(imgHSV);
+        
+          cvSmooth(imgThresh, imgThresh, CV_GAUSSIAN,3,3); //smooth the binary image using Gaussian kernel
+          
+         //track the possition of the ball
+         trackObject(imgThresh);
 
-            cvShowImage("Ball", imgThresh);           
-           cvShowImage("Video", frame);
-           
-           //Clean up used images
-           cvReleaseImage(&imgHSV);
-           cvReleaseImage(&imgThresh);            
-           cvReleaseImage(&frame);
+          // Add the tracking image and the frame
+         cvAdd(frame, imgTracking, frame);
 
-            //Wait 10mS
-            int c = cvWaitKey(10);
-            //If 'ESC' is pressed, break the loop
-            if((char)c==27 ) break;      
-      }
+          cvShowImage("Ball", imgThresh);
+         cvShowImage("Video", frame);
+         
+         //Clean up used images
+         cvReleaseImage(&imgHSV);
+         cvReleaseImage(&imgThresh);
+         cvReleaseImage(&frame);
 
-      cvDestroyAllWindows() ;
-      cvReleaseImage(&imgTracking);
-      cvReleaseCapture(&capture);     
+          //Wait 10mS
+          int c = cvWaitKey(10);
+          //If 'ESC' is pressed, break the loop
+          if((char)c==27 ) break;
+    }
 
-      return 0;
+    cvDestroyAllWindows();
+    cvReleaseImage(&imgTracking);
+    cvReleaseCapture(&capture);
+
+    return 0;
 }
