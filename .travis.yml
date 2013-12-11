@@ -5,7 +5,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install build-essential
   - ./get-deps.sh
-  - chmox +x get-deps.sh
+  - chmod +x get-deps.sh
 
 before_script:
   - chmod +x runner.sh
