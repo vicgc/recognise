@@ -17,9 +17,8 @@ make test
 
 ### TODO
 - [x] Add Separate conf file
-- [x] Add play config file
-- [x] Add .sbt deps
-- [ ] Multiple Indexes
-- [ ] RESTful API with JSON
-- [ ] Database Integration with Postgres
-- [ ] Session management with Redis
+- [x] Add direct openCL support
+- [x] Add cmake build
+- [ ] Python CL extension
+- [ ] Redis cache + store
+- [ ] Better logs + elasticsearch on logs
