@@ -11,3 +11,15 @@ make
 make install
 make test
 ```
+
+
+![alt tag](https://raw.github.com/ianjuma/sample-play-search/master/public/images/app.png)
+
+### TODO
+- [x] Add Separate conf file
+- [x] Add play config file
+- [x] Add .sbt deps
+- [ ] Multiple Indexes
+- [ ] RESTful API with JSON
+- [ ] Database Integration with Postgres
+- [ ] Session management with Redis
