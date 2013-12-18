@@ -6,8 +6,7 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     VideoCapture cap(0);
 
     if (!cap.isOpened()) {
@@ -15,17 +14,15 @@ int main(int argc, char* argv[])
         return -1;
     }
 
-   double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH);
-   double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
+    double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH);
+    double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
 
     cout << "Frame size : " << dWidth << " x " << dHeight << endl;
 
     namedWindow("MyVideo",CV_WINDOW_AUTOSIZE);
 
-    while (1)
-    {
+    while (1) {
         Mat frame;
-
         bool bSuccess = cap.read(frame);
 
         if (!bSuccess) {
