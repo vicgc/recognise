@@ -4,6 +4,7 @@ Recognise
 [![BuildStatus](https://travis-ci.org/ianjuma/recognise.png)](https://travis-ci.org/ianjuma/recognise)
 
 Facial detection and recognition using OpenCV and libfacerec
+
 **Feel free to contribute, open an issue or make a _pull-request_**
 
 ####Install openCV and header files
