@@ -9,7 +9,11 @@ OpenCV tutorial on Facial detection and recognition
 ```
 make get-deps
 make
-make install
+sudo make install
+```
+
+#### Don't forget to run tests
+```
 make test
 ```
 
@@ -32,7 +36,8 @@ make test
 ### TODO
 - [x] Add Separate conf file
 - [x] Add direct openCL support
-- [x] Add cmake build
+- [x] Add cmake build, autotools+automake
 - [ ] Python CL extension
 - [ ] Redis cache + store
 - [ ] Better logs + elasticsearch on logs
+- [ ] ML and entity classification
