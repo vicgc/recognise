@@ -14,9 +14,9 @@ make test
 
 ###Algorithms Used
 
-Principal based approach - eigenfaces
-PCA algorithm
-fisherfaces
+- Principal based approach - eigenfaces
+- PCA algorithm
+- fisherfaces
 
 ###Image classification
 
