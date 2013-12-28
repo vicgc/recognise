@@ -37,11 +37,11 @@
 # Some underlying scripts like create_csv will not work in other versions, like Python 3.
 # ------------------------------------------------------------------------------------------------
 
-
 import os
 import sys
 import cv2
 import numpy as np
+
 
 def normalize(X, low, high, dtype=None):
     """Normalizes a given array in X to a value between low and high."""
@@ -91,6 +91,7 @@ def read_images(path, sz=None):
                     raise
             c = c+1
     return [X,y]
+
 
 if __name__ == "__main__":
     # This is where we write the images, if an output_dir is given
