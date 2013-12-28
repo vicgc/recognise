@@ -16,6 +16,7 @@ make test
 
 Principal based approach - eigenfaces
 PCA algorithm
+fisherfaces
 
 ###Image classification
 
