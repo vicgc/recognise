@@ -59,7 +59,7 @@ def normalize(X, low, high, dtype=None):
 
 
 def read_images(path, sz=None):
-    """Reads the images in a given folder, resizes images on the fly if size is given.
+    """Reads the images in a given folder by name, resizes images on the fly if size is given.
 
     Args:
         path: Path to a folder with subfolders representing the subjects (persons).
@@ -79,7 +79,7 @@ def read_images(path, sz=None):
             for filename in os.listdir(subject_path):
                 try:
                     im = cv2.imread(os.path.join(subject_path, filename), cv2.IMREAD_GRAYSCALE)
-                    # resize to given size (if given)
+                    # resize to given size  or by default .. thin image up(if given)
                     if (sz is not None):
                         im = cv2.resize(im, sz)
                     X.append(np.asarray(im, dtype=np.uint8))
