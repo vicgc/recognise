@@ -7,6 +7,7 @@ OpenCV tutorial on Facial detection and recognition
 
 ####Install openCV and header files
 ```
+make get-deps
 make
 make install
 make test
