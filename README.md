@@ -20,6 +20,10 @@ make test
 
 ###Image classification
 
+###Validation
+- classification
+- learning (ML)
+
 ###Pattern Recognition
 
 ![alt tag](https://raw.github.com/ianjuma/sample-play-search/master/public/images/app.png)
