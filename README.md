@@ -12,6 +12,14 @@ make install
 make test
 ```
 
+###Algorithms Used
+
+Principal based approach - eigenfaces
+PCA algorithm
+
+###Image classification
+
+###Pattern Recognition
 
 ![alt tag](https://raw.github.com/ianjuma/sample-play-search/master/public/images/app.png)
 
