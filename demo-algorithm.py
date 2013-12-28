@@ -150,7 +150,7 @@ if __name__ == "__main__":
     if out_dir is None:
         cv2.imshow("mean", mean_resized)
     else:
-        cv2.imwrite("%s/mean.png" % (out_dir), mean_resized)
+        cv2.imwrite("%s/mean_.png" % (out_dir), mean_resized)
     # Turn the first (at most) 16 eigenvectors into grayscale
     # images. You could also use cv::normalize here, but sticking
     # to NumPy is much easier for now.
