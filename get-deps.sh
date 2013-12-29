@@ -22,3 +22,9 @@ sudo make install
 sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 echo "OpenCV" $version "ready to be used"
+
+echo "Installing pip"
+sudo apt-get install python-pip
+
+echo "Installing python deps + logging"
+sudo pip install -r requirements.txt
