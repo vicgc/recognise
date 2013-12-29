@@ -2,6 +2,10 @@
 #include <CL/cl.hpp>  
 #include <boost/foreach.hpp>
 
+// simple openCL test
+// check if device is working and 
+// report on number of devices that
+// shall be used - cores
 int main(int, char**) {
     std::vector<cl::Platform> platforms;
     cl::Platform::get(&platforms);
