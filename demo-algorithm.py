@@ -45,6 +45,7 @@ import numpy as np
 
 def normalize(X, low, high, dtype=None):
     """Normalizes a given array in X to a value between low and high."""
+    # scale and normalize image
     X = np.asarray(X)
     minX, maxX = np.min(X), np.max(X)
     # normalize to [0...1].
