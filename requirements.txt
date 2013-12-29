@@ -1,9 +1,10 @@
 # cython openCV
+# get deps on current git versions
 
 opencv
-numpy
-ctypes
-cython
+numpy==1.8.0
+ctypes==1.0.2
+Cython==0.19.2
 gunicorn==0.14.2
 requests==0.11.1
 distribute==0.6.24
