@@ -42,7 +42,19 @@ import sys
 import cv2
 import numpy as np
 import syslog
+import logging
+import logging.handlers
 
+my_logger = logging.getLogger('MyLogger')
+my_logger.setLevel(logging.DEBUG)
+
+# add dev log with syslog
+handler = logging.handlers.SysLogHandler(address = '/dev/log')
+
+my_logger.addHandler(handler)
+
+my_logger.debug('debug')
+my_logger.critical('critical')
 
 def normalize(X, low, high, dtype=None):
     """Normalizes a given array in X to a value between low and high."""
