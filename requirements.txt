@@ -1,0 +1,9 @@
+# cython openCV
+
+opencv
+numpy
+ctypes
+cython
+gunicorn==0.14.2
+requests==0.11.1
+distribute==0.6.24
