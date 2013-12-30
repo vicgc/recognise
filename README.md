@@ -23,7 +23,13 @@ make test
 
 - Principal based approach - eigenfaces
 - PCA algorithm
-- fisherfaces
+- fisherfaces (local template matching)
+- 
+
+###Problem description
+problems of face-detection
+feature extraction
+problems of facial recognition
 
 ###Image classification
 
