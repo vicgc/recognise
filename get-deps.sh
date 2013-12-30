@@ -27,4 +27,4 @@ echo "Installing pip"
 sudo apt-get install python-pip
 
 echo "Installing python deps + logging"
-sudo pip install -r requirements.txt
+sudo pip install -r requirements.txt --no-index
