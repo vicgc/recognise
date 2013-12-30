@@ -27,9 +27,11 @@ make test
 
 
 ###Problem description
-problems of face-detection
-feature extraction
-problems of facial recognition
+
+- problems of face-detection
+- feature extraction
+- problems of facial recognition
+
 
 ###Image classification
 
