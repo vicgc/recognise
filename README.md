@@ -47,7 +47,7 @@ make test
 - [x] Add Separate conf file
 - [x] Add direct openCL support
 - [x] Add cmake build, autotools+automake
-- [ ] Python CL extension
+- [x] Python CL extension
 - [ ] Redis cache + store
 - [ ] Better logs + elasticsearch on logs
 - [ ] ML and entity classification
