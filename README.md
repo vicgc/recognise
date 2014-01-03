@@ -51,3 +51,14 @@ make test
 - [ ] Redis cache + store
 - [ ] Better logs + elasticsearch on logs
 - [ ] ML and entity classification
+
+
+###some docs and tuts
+
+http://www.cs.colostate.edu/evalfacerec/index10.php
+http://www.cs.colostate.edu/evalfacerec/algorithms5.php
+http://web.archive.org/web/20080522171806/http:/www.ansatt.hig.no/erikh/papers/hig98_6/node2.html
+http://stackoverflow.com/questions/953714/face-recognition-library
+http://blog.mashape.com/post/53379410412/list-of-50-face-detection-recognition-apis
+http://www.luxand.com/facesdk/?utm_expid=4075614-16&utm_referrer=http%3A%2F%2Fwww.facedetection.com%2Ffacedetection%2Fsoftware.htm
+http://www.facedetection.com/facedetection/techniques.htm
