@@ -51,6 +51,8 @@ make test
 - [ ] Redis cache + store
 - [ ] Better logs + elasticsearch on logs
 - [ ] ML and entity classification
+- [ ] Video4linux + video face detection and recognition
+- [ ] openCL kernels monitoring
 
 
 ###some docs and tuts
