@@ -1,4 +1,5 @@
 #!/bin/bash
+# setup template
 
 function check_install {
     if [ -z "`which "$1" 2>/dev/null`" ]
