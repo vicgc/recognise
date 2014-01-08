@@ -29,8 +29,8 @@ make test
 ###Problem description
 
 - problems of face-detection
-- feature extraction
-- problems of facial recognition
+- feature extraction techniques
+- problems of facial recognition, pattern-matching
 
 
 ###Image classification
