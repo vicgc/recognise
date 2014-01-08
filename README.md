@@ -55,7 +55,7 @@ make test
 - [ ] openCL kernels monitoring
 
 
-###some docs and tuts
+###some docs and refs
 
 [libfacerex](http://www.cs.colostate.edu/evalfacerec/index10.php)
 [list of algorithms](http://www.cs.colostate.edu/evalfacerec/algorithms5.php)
