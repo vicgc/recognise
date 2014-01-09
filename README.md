@@ -47,8 +47,8 @@ make test
 - [x] Add Separate conf file
 - [x] Add direct openCL support
 - [x] Add cmake build, autotools+automake
-- [x] Python CL extension
-- [ ] Redis cache + store
+- [x] Python CL extension - openMP
+- [ ] Redis cache + store - zmq
 - [ ] Better logs + elasticsearch on logs
 - [ ] ML and entity classification
 - [ ] Video4linux + video face detection and recognition
