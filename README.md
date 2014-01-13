@@ -5,6 +5,8 @@ Recognise
 
 Facial detection and recognition using OpenCV and libfacerec
 
+this is a basic template for my project - modules yet to be written
+
 **Feel free to contribute, open an issue or make a _pull-request_**
 
 ####Install openCV and header files
