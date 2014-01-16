@@ -21,5 +21,6 @@ int async() {
 }
 
 int main() {
-
+    async();
+    return 0;
 }
