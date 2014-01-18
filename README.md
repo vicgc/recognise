@@ -55,6 +55,7 @@ make test
 - [ ] ML and entity classification
 - [ ] Video4linux + video face detection and recognition
 - [ ] openCL kernels monitoring
+- [ ] poe cameras - video feed
 
 
 ###some docs and refs
