@@ -57,6 +57,7 @@ make test
 - [ ] openCL kernels monitoring
 - [ ] poe cameras - high fps
 - [ ] management console
+- [ ] notifications (RESTfull)
 
 
 ###some docs and refs
