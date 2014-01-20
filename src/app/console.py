@@ -20,9 +20,6 @@ if __name__ == '__main__':
     puts('Greet:')
     with indent(4):
         puts(colored.red('Здравствуйте'))
-        puts(colored.green('你好。'))
-        puts(colored.yellow('سلام'))
-        puts(colored.magenta('안녕하세요'))
         puts(colored.blue('नमस्ते'))
         puts(colored.cyan('γειά σου'))
 
