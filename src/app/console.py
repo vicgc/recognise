@@ -8,7 +8,7 @@ from clint import piped_in
 
 if __name__ == '__main__':
 
-    puts('Test:')
+    puts('Tests:')
     with indent(4):
         puts('%s Fake test 1.' % colored.green('✔'))
         puts('%s Fake test 2.' % colored.red('✖'))
