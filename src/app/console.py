@@ -13,8 +13,8 @@ if __name__ == '__main__':
 
     puts('Tests:')
     with indent(4):
-        puts('%s Fake test 1.' % colored.green('✔'))
-        puts('%s Fake test 2.' % colored.red('✖'))
+        puts('%s All tests passed 1.' % colored.green('✔'))
+        puts('%s Failed? ' % colored.red('✖'))
 
     puts('')
     puts('Greet:')
@@ -29,4 +29,3 @@ if __name__ == '__main__':
         puts('%s' % colored.red(args[0]))
 
     puts('')
-    puts('File:')
