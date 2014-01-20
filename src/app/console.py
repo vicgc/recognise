@@ -3,7 +3,6 @@
 
 from clint.textui import colored, puts, indent
 from clint.arguments import Args
-from clint import piped_in
 
 
 args = Args()
