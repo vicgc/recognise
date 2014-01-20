@@ -6,6 +6,8 @@ from clint.arguments import Args
 from clint import piped_in
 
 
+args = Args()
+
 if __name__ == '__main__':
 
     puts('Tests:')
