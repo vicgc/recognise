@@ -56,7 +56,7 @@ make test
 - [ ] Video4linux + video face detection and recognition
 - [ ] openCL kernels monitoring
 - [ ] poe cameras - high fps
-- [ ] management console
+- [ ] management console, logging
 - [ ] notifications (RESTfull)
 
 
