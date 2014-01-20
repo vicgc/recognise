@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: <utf-8> -*-
+
 # Print text in all colors
 
 from clint.textui import colored, puts, indent
