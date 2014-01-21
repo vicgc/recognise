@@ -500,6 +500,7 @@ int loadFaceImgArray(const char * filename)
 		// load the face image
 		faceImgArr[iFace] = cvLoadImage(imgFilename, CV_LOAD_IMAGE_GRAYSCALE);
 
+        // resource leak
 		if( !faceImgArr[iFace] )
 		{
 			fprintf(stderr, "Can\'t load image from %s\n", imgFilename);
