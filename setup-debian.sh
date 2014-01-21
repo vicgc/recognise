@@ -81,10 +81,6 @@ function install_redis {
     sudo apt-get -q -y install redis-server
 }
 
-function install_fonts {
-    sudo apt-get -q -y install fonts-lao
-}
-
 function install_dropbear {
     check_install dropbear dropbear
     check_install /usr/sbin/xinetd xinetd
@@ -122,26 +118,6 @@ function install_exim4 {
     fi
 }
 
-function install_mysql {
-    # Install the MySQL packages
-
-    sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password raspberry'
-    sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password raspberry'
-    check_install mysqld mysql-server-5.5
-
-    # Install a low-end copy of the my.cnf to disable InnoDB, and then delete
-    # all the related files.
-
-    mkdir -p /etc/mysql/conf.d/
-    echo -e "[mysqld] \
-      key_buffer = 8M \
-      query_cache_size = 0 \
-      skip-innodb" > /etc/mysql/conf.d/lowendbox.cnf
-
-    echo -e "[client] \n user = root \n password = raspberry" > ~/.my.cnf
-    chmod 600 ~/.my.cnf
-}
-
 function install_nginx {
     check_install nginx nginx
 
@@ -151,10 +127,6 @@ server_names_hash_bucket_size 64;
 END
 
     invoke-rc.d nginx restart
-}
-
-function install_php {
-    sudo apt-get -y -q install php5 php5-fpm php-pear php5-mysql
 }
 
 function install_syslogd {
@@ -197,77 +169,6 @@ END
 END
 
     invoke-rc.d inetutils-syslogd start
-}
-
-function install_wordpress {
-    check_install wget wget
-
-#     sudo git clone "https://bitbucket.org/villagescience/wordpress.git /var/www/$1"
-    sudo chown root:root -R "/var/www/$1"
-    sudo chmod 777 -R "/var/www/$1/wp-content"
-    sudo chmod 666 "/var/www/$1/.htaccess"
-    sudo chmod 666 "/var/www/$1/wp-config.php"
-
-    # Setting up the MySQL database
-    dbname=`echo $1 | tr . _`
-    userid=`get_domain_name $1`
-    # MySQL userid cannot be more than 15 characters long
-    userid="${userid:0:15}"
-    passwd=`get_password "$userid@mysql"`
-    sed -i "s/database_name_here/$dbname/; s/username_here/$userid/; s/password_here/$passwd/" \
-        "/var/www/$1/wp-config.php"
-    mysqladmin create "$dbname"
-    echo "GRANT ALL PRIVILEGES ON \`$dbname\`.* TO \`$userid\`@localhost IDENTIFIED BY '$passwd';" | \
-        mysql
-
-    rm -r /etc/nginx/sites-available/default
-
-    # Setting up Nginx mapping
-    cat > "/etc/nginx/sites-enabled/$1.conf" <<END
-server {
-    listen       80 default_server;
-    server_name  vspi.local;
-    root         /var/www/$1;
-
-    location /index.php {
-        alias /var/www/$1/wp-index-redis.php;
-    }
-
-    location / {
-        index wp-index-redis.php;
-        try_files \$uri \$uri/ /wp-index-redis.php?\$args;
-    }
-
-    location /wp-admin/ {
-        index index.php;
-        try_files \$uri \$uri/ /index.php\$args;
-    }
-
-    # Add trailing slash to /wp-admin requests
-    rewrite /wp-admin\$ \$scheme::/\$host\$uri/ permanent;
-
-    gzip off;
-
-    # Directives to send expires headers and turn off 404 error logging.
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-        expires 24h;
-        log_not_found off;
-    }
-
-    # this prevents hidden files (beginning with a period) from being served
-          location ~ /\.          { access_log off; log_not_found off; deny all; }
-
-    location ~ \.php$ {
-        client_max_body_size 25M;
-        try_files      \$uri =404;
-        fastcgi_pass   unix:/var/run/php5-fpm.sock;
-        fastcgi_index  index.php;
-        include        /etc/nginx/fastcgi_params;
-    }
-}
-END
-    invoke-rc.d nginx reload
-    curl -d "weblog_title=VSPi&user_name=admin&admin_password=raspberry&admin_password2=raspberry&admin_email=vspi@villagescience.org" http://127.0.0.1/wp-admin/install.php?step=2 >/dev/null 2>&1
 }
 
 function print_info {
@@ -406,13 +307,10 @@ export PATH=/bin:/usr/bin:/sbin:/usr/sbin
 
 check_sanity
 update_upgrade
-install_mysql
 install_nginx
-install_php
 remove_unneeded
 install_syslogd
 install_redis
-install_fonts
-install_wordpress vspi.local
+vspi.local
 config_network
 sudo reboot
