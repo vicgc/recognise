@@ -51,7 +51,7 @@ make test
 
 ### TODO
 - [x] Add Separate conf file
-- [x] openCL support, cmake OPENCL=ON
+- [x] openCL support, cmake OPENCL=ON, intel GPU support
 - [x] Add cmake build, autotools+automake
 - [x] Python CL extension - openMP
 - [ ] Redis cache + store - zmq
