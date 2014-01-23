@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import sys
+
 from clint.textui import colored, puts, indent
 from clint.arguments import Args
 
@@ -18,3 +20,5 @@ if __name__ == '__main__':
         puts(colored.red('Здравствуйте'))
 
     puts('')
+
+    print sys.argv[0]
