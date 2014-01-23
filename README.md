@@ -38,6 +38,7 @@ make test
 
 
 ###Image classification
+- gender classification
 
 ###Validation
 - classification
