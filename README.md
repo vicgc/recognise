@@ -37,7 +37,7 @@ make test
 - problems of facial recognition, pattern-matching
 
 
-###Image classification
+###Classification
 - gender classification
 
 ###Validation
