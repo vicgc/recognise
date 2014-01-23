@@ -52,7 +52,7 @@ make test
 
 ### TODO
 - [x] Add Separate conf file
-- [x] Add direct openCL support
+- [x] openCL support, cmake OPENCL=ON
 - [x] Add cmake build, autotools+automake
 - [x] Python CL extension - openMP
 - [ ] Redis cache + store - zmq
