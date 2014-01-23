@@ -48,7 +48,6 @@ make test
 
 ###Pattern Recognition
 
-![alt tag](https://raw.github.com/ianjuma/sample-play-search/master/public/images/app.png)
 
 ### TODO
 - [x] Add Separate conf file
