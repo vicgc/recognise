@@ -40,9 +40,11 @@ make test
 ###Classification
 - gender classification
 
+
 ###Validation
 - classification
 - learning (ML)
+
 
 ###Pattern Recognition
 
