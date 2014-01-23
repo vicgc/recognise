@@ -17,6 +17,9 @@ parser.add_option("-q", "--quiet",
                     action="store_false", dest="verbose", default=True,
                     help="don't print status messages to stdout")
 
+parser.add_option("--daemonize", "-D",
+                   dest="./console.py", help="Start program in the background")
+
 if __name__ == '__main__':
     (options, args) = parser.parse_args()
     puts('Tests:')
