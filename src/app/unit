@@ -1,0 +1,14 @@
+[Unit]
+Description=recogn
+After=
+After=
+
+[Service]
+ExecStart=/usr/bin/recogn -D
+FOREGROUND
+ExecStartPost=/usr/bin/recogn -D
+ExecStop=/usr/bin/recogn --stop
+ExecStopPost=/usr/bin/recogn --stop
+
+[Install]
+WantedBy=
