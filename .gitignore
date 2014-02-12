@@ -3,6 +3,7 @@
 *.lo
 *.o
 /bin
+/_site
 
 # Compiled Dynamic libraries
 *.so
