@@ -61,7 +61,7 @@ make test
 - [ ] openCL kernels monitoring
 - [ ] poe cameras - high fps
 - [ ] management console, logging
-- [ ] notifications (RESTfull)
+- [ ] notifications (RESTfull) - service hooks
 
 
 ###some docs and refs
