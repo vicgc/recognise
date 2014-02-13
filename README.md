@@ -49,6 +49,10 @@ make test
 ###Pattern Recognition
 
 
+###Known Bugs :bug:
+- [x] libpq exception
+
+
 ### TODO
 - [x] Add Separate conf file
 - [x] openCL support, cmake OPENCL=ON, intel GPU support
