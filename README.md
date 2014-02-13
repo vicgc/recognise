@@ -47,6 +47,8 @@ make test
 
 
 ###Pattern Recognition
+- object recognition
+- no plate recognition
 
 
 ###Known Bugs :bug:
