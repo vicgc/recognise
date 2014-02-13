@@ -9,7 +9,7 @@ This is a basic template for my project - modules yet to be written
 
 NB: The project is still in its infancy
 
-**Feel free to contribute, open an issue or make a _pull-request_**
+**contribute, open an issue or make a _pull-request_**
 
 ####Install openCV and header files
 ```
