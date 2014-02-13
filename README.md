@@ -1,7 +1,7 @@
 Recognise
 =========
 
-[![BuildStatus](https://travis-ci.org/ianjuma/recognise.png)](https://travis-ci.org/ianjuma/recognise)
+[![BuildStatus](https://travis-ci.org/synod32/recognise.png)](https://travis-ci.org/ianjuma/recognise)
 
 Facial detection and recognition using OpenCV and libfacerec
 
