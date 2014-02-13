@@ -78,7 +78,9 @@ function install_dash {
 
 
 function install_redis {
-    sudo apt-get -q -y install redis-server
+    apt-get -q -y install redis-server
+    apt-get install libpq-dev
+    apt-get install libpq5
 }
 
 function install_dropbear {
