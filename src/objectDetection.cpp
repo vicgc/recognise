@@ -28,6 +28,11 @@ int main( int argc, const char** argv ) {
  if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
  if( !eyes_cascade.load( eyes_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 
+ if (argc > 0) {
+     const char *trainer = argv[1];
+     printf("Using trainer -> %s", trainer);
+ }
+
  //-- 2. Read the video stream
  capture = cvCaptureFromCAM( -1 );
  if( capture ) {
