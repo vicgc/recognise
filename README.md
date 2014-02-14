@@ -39,6 +39,8 @@ make test
 
 ###Classification
 - gender classification
+- ethnic classification
+- emotion classification
 
 
 ###Validation
