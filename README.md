@@ -74,6 +74,8 @@ make test
 
 ###some docs and refs :fr:
 
+[Installing OpenCL](https://gist.github.com/ianjuma/9026377)
+
 [libfacerex](http://www.cs.colostate.edu/evalfacerec/index10.php)
 
 [list of algorithms](http://www.cs.colostate.edu/evalfacerec/algorithms5.php)
