@@ -1,22 +1,7 @@
 #!/bin/bash - 
-#===============================================================================
-#
 #          FILE: get-cl.sh
 # 
 #         USAGE: ./get-cl.sh 
-# 
-#   DESCRIPTION: 
-# 
-#       OPTIONS: ---
-#  REQUIREMENTS: ---
-#          BUGS: ---
-#         NOTES: ---
-#        AUTHOR: Ian Juma,
-#  ORGANIZATION: Synod
-#       CREATED: 12/12/2013 12:41:52 PM EAT
-#      REVISION:  ---
-#===============================================================================
-
 set -o nounset                              # Treat unset variables as an error
 
 
