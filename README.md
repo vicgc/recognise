@@ -89,3 +89,5 @@ make test
 [face-detection libs](http://www.luxand.com/facesdk/?utm_expid=4075614-16&utm_referrer=http%3A%2F%2Fwww.facedetection.com%2Ffacedetection%2Fsoftware.htm)
 
 [face-recognition techniques](http://www.facedetection.com/facedetection/techniques.htm)
+
+[docs CV and robotics](http://www.intorobotics.com/how-to-detect-and-track-object-with-opencv/)
