@@ -6,6 +6,8 @@
 #include <zmq.h>
 
 
+// gcc demo_zmq.c -L/usr/local/lib -lzmq
+
 int main (void) {
 
     printf("START\n");
