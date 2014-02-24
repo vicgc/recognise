@@ -4,11 +4,10 @@
 using namespace std;
 using namespace pqxx;
 
-int main(int argc, char* argv[])
-{
-   char * sql;
+int main() {
+   const char * sql;
    
-   try{
+   try {
       connection C("dbname=benchcare user=synod password= \
       hostaddr=127.0.0.1 port=5432");
       if (C.is_open()) {
