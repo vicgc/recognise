@@ -8,7 +8,7 @@ int main() {
    const char * sql;
    
    try {
-      connection C("dbname=testdb user=postgres password=cohondob \
+      connection C("dbname=benchcare user=synod password= \
       hostaddr=127.0.0.1 port=5432");
       if (C.is_open()) {
          cout << "Opened database successfully: " << C.dbname() << endl;

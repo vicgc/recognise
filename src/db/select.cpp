@@ -4,6 +4,8 @@
 using namespace std;
 using namespace pqxx;
 
+// g++ select.cpp -lpqxx -lpq
+
 int main() {
    const char * sql;
    
