@@ -8,7 +8,7 @@
 #include <fcntl.h>
 
 
-int main(int argc, char *argv[]) {
+int main() {
     REDIS rh;
     char *val;
 

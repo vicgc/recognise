@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// gcc openMP.c -fopenmp
+
 int main(int argc, char *argv[]) {
 
     const int N = 10000;

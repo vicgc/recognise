@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <pthread.h>
 
+// gcc openMP.c -fopenmp
+
 int
 main() {
     #pragma omp parallel
