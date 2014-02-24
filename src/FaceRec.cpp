@@ -42,9 +42,12 @@
 #include <vector>
 #include <string>
 //#include <string.h>
-#include "cv.h"
+#include <opencv/cv.h>
 #include "cvaux.h"
-#include "highgui.h"
+
+// aptitude search cvaux
+
+#include <opencv/highgui>
 
 #ifndef BOOL
 	#define BOOL bool
