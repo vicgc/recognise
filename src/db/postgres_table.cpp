@@ -15,9 +15,8 @@ using namespace pqxx;
 // close prepared statement
 // close db connection
 
-int main(int argc, char* argv[])
-{
-   char * sql;
+int main() {
+   const char * sql;
    
    try{
       connection C("dbname=benchcare user=synod password= \
