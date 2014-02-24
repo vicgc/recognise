@@ -13,7 +13,7 @@ int main() {
 	int             row;
 	int             col;
 
-	conn = PQconnectdb("dbname=benchcare host=localhost user=synod password=j633.125**//");
+	conn = PQconnectdb("dbname=benchcare host=localhost user=synod password=");
 
 	if (PQstatus(conn) == CONNECTION_BAD) {
 	     puts("We were unable to connect to the database");
