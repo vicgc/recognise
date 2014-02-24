@@ -46,8 +46,6 @@ int main() {
 	puts("==========================");
 
 	PQclear(res);
-
 	PQfinish(conn);
-
 	return 0;
 }
