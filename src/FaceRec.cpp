@@ -43,7 +43,7 @@
 #include <string>
 //#include <string.h>
 #include <opencv/cv.h>
-#include "cvaux.h"
+#include <cvaux.h>
 
 //g++ FaceRec.cpp `pkg-config --cflags --libs opencv`
 
