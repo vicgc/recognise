@@ -6,6 +6,14 @@ using namespace pqxx;
 
 // conn interface - conn, close, insert -> 
 // tables + update
+// Open the db connection
+// prepare the statements
+// adjust prepared statements params
+// execute the statements
+// loop through resultset
+// close resultset
+// close prepared statement
+// close db connection
 
 int main(int argc, char* argv[])
 {
