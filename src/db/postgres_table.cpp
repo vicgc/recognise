@@ -18,7 +18,7 @@ using namespace pqxx;
 int main() {
    const char * sql;
    
-   try{
+   try {
       connection C("dbname=benchcare user=synod password= \
       hostaddr=127.0.0.1 port=5432");
       if (C.is_open()) {
@@ -43,7 +43,7 @@ int main() {
       W.commit();
       cout << "Table created successfully" << endl;
       C.disconnect ();
-   }catch (const std::exception &e){
+   } catch (const std::exception &e){
       cerr << e.what() << std::endl;
       return 1;
    }

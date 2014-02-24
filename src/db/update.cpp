@@ -45,7 +45,7 @@ int main() {
       }
       cout << "Operation done successfully" << endl;
       C.disconnect ();
-   }catch (const std::exception &e){
+   } catch (const std::exception &e){
       cerr << e.what() << std::endl;
       return 1;
    }
