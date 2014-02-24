@@ -1,6 +1,9 @@
 #include <cv.h>
 // #include <highgui.h>
-#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/highgui/highgui.hpp>
+
+// g++ track.cpp -I /usr/include/opencv `pkg-config --cflags --libs opencv`
+
 
 
 IplImage* imgTracking;
