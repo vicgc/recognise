@@ -45,6 +45,8 @@
 #include <opencv/cv.h>
 #include "cvaux.h"
 
+//g++ FaceRec.cpp `pkg-config --cflags --libs opencv`
+
 // aptitude search cvaux
 
 #include <opencv/highgui>
