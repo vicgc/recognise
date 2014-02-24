@@ -4,7 +4,7 @@
 #include <time.h>
 #include "hiredis.h"
 
-gcc -Llibhiredis.so redis-conn.c -lhiredis
+// gcc -Llibhiredis.so redis-conn.c -lhiredis
 
 int main() {
     redisReply *reply;
