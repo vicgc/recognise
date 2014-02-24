@@ -1,9 +1,11 @@
-#include "opencv2/objdetect/objdetect.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
+#include <opencv2/objdetect/objdetect.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 #include <iostream>
 #include <stdio.h>
+
+// g++ webcam_recognise.cpp `pkg-config --cflags --libs opencv` -I/usr/include/opencv2/
 
 using namespace std;
 using namespace cv;
@@ -35,7 +37,7 @@ IplImage* getCameraFrame(CvCapture* &camera)
 			printf("Got the camera at %dx%d resolution.\n", w, h);
 		}
 		// Wait a little, so that the camera can auto-adjust its brightness.
-		Sleep(1000);	// (in milliseconds)
+		sleep(1000);	// (in milliseconds)
 	}
 
 	// Wait until the next camera frame is ready, then grab it.
