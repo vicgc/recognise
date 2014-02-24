@@ -13,3 +13,10 @@
 *.lai
 *.la
 *.a
+
+# makefile automake + autoconf and tools
+Makefile.am
+Makefile.in
+autom4te.cache/
+config.status
+configure.ac
