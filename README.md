@@ -72,6 +72,7 @@ make test
 - [ ] poe cameras - high fps
 - [ ] management console, logging
 - [ ] notifications (RESTfull) - service hooks
+- [x] postgres integration
 
 
 ###some docs and refs :fr:
