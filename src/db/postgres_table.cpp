@@ -4,6 +4,9 @@
 using namespace std;
 using namespace pqxx;
 
+// conn interface - conn, close, insert -> 
+// tables + update
+
 int main(int argc, char* argv[])
 {
    char * sql;
