@@ -4,6 +4,8 @@
 using namespace std;
 using namespace pqxx;
 
+// clang++ update.cpp -o update -lpqxx -lpq
+
 int main() {
    const char * sql;
    
