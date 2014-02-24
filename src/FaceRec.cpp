@@ -1,5 +1,4 @@
 //////////////////////////////////////////////////////////////////////////////////////
-// OnlineFaceRec.cpp, by Shervin Emami (www.shervinemami.info) on 30th Dec 2011.
 // Online Face Recognition from a camera using Eigenfaces.
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -49,7 +48,7 @@
 
 // aptitude search cvaux
 
-#include <opencv/highgui>
+#include <opencv2/highgui/highgui_c.h>
 
 #ifndef BOOL
 	#define BOOL bool
