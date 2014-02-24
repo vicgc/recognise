@@ -5,6 +5,10 @@ using namespace std;
 using namespace pqxx;
 
 // g++ select.cpp -lpqxx -lpq
+//
+// vim /usr/include/pqxx/cursor.hxx +310
+// fix constructor args
+// clang++ !!
 
 int main() {
    const char * sql;
