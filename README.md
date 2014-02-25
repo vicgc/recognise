@@ -20,6 +20,12 @@ make
 sudo make install
 ```
 
+#### get gpu and cpu info
+```
+lspci | grep VGA
+cat /proc/cpuinfo | grep sse3
+```
+
 #### Don't forget to run tests
 ```
 make test
