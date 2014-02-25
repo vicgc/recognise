@@ -94,3 +94,5 @@ make test
 [face-recognition techniques](http://www.facedetection.com/facedetection/techniques.htm)
 
 [docs CV and robotics](http://www.intorobotics.com/how-to-detect-and-track-object-with-opencv/)
+
+[classifiers- banana](http://blog.csdn.net/sjz_iron/article/details/8511460)
