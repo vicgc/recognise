@@ -12,6 +12,7 @@
 // clang main.c -I /opt/intel/opencl-1.2-3.1.1.11385/include/CL/ -L /usr/lib/libOpenCL.so
 // clang -L /usr/lib/libOpenCL.so main.c /opt/intel/opencl-1.2-3.1.1.11385/lib64/libOpenCL.so.1.2
 // g++ -L /usr/lib/libOpenCL.so main.c -L/opt/intel/opencl-1.2-3.1.1.11385/lib64/ -lOpenCL
+// gcc -o cl main.c -L/opt/intel/opencl-1.2-3.1.1.11385/lib64/ -lOpenCL
 
 int main(void) {
     // Create the two input vectors

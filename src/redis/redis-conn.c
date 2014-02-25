@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "hiredis.h"
+#include <hiredis/hiredis.h>
 
 // gcc -Llibhiredis.so redis-conn.c -lhiredis
 
