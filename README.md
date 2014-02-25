@@ -96,3 +96,5 @@ make test
 [docs CV and robotics](http://www.intorobotics.com/how-to-detect-and-track-object-with-opencv/)
 
 [classifiers- banana](http://blog.csdn.net/sjz_iron/article/details/8511460)
+
+[classifiers - face detect](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
