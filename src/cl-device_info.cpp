@@ -13,6 +13,8 @@
  
 #include <sstream>
 #include <fstream>
+
+// clang cl-device_info.cpp /opt/intel/opencl-1.2-3.1.1.11385/lib64/libOpenCL.so.1.2 -LopenCL
  
 void clPrintDevInfo(cl_device_id device) {
   char device_string[1024];
