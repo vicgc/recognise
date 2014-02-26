@@ -106,3 +106,5 @@ make test
 [classifiers - face detect](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
 
 [openCL gpu devices support](http://streamcomputing.eu/blog/2011-12-29/opencl-hardware-support/)
+
+[The openCL book](http://www.fixstars.com/en/opencl/book/OpenCLProgrammingBook/calling-the-kernel/)
