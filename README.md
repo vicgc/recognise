@@ -109,4 +109,6 @@ make test
 
 [openCL gpu devices support](http://streamcomputing.eu/blog/2011-12-29/opencl-hardware-support/)
 
+[driver camera](http://www.raspberrypi.org/archives/5580)
+
 [The openCL book](http://www.fixstars.com/en/opencl/book/OpenCLProgrammingBook/calling-the-kernel/)
