@@ -103,6 +103,8 @@ make test
 
 [classifiers- banana](http://blog.csdn.net/sjz_iron/article/details/8511460)
 
+[opencv demo](http://www.shervinemami.info/faceRecognition.html)
+
 [classifiers - face detect](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
 
 [openCL gpu devices support](http://streamcomputing.eu/blog/2011-12-29/opencl-hardware-support/)
