@@ -30,6 +30,12 @@ build: src/cam.cpp
 	echo "Done :)"
 
 
+redis: src/redis
+	echo "Building redis -> ..."
+	$(CC) $(DEPS) $(THREADFLAGS) -c src/redis/conn.cpp
+	echo "Done ->"
+
+
 clean:
 	rm -rf bin/*.o bin/.so
 
