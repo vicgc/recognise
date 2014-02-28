@@ -15,7 +15,7 @@ int main() {
    
    try {
       connection C("dbname=benchcare user=synod password= \
-      hostaddr=127.0.0.1 port=5432");
+      hostaddr=192.167.98.23 port=5432");
       if (C.is_open()) {
          cout << "Opened database successfully: " << C.dbname() << endl;
       } else {
