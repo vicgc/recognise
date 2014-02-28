@@ -59,6 +59,8 @@ make test
 ###Pattern Recognition
 - object recognition
 - no plate recognition
+- movement and pattern extraction
+- info extraction on movements
 
 
 ###Known Bugs :bug:
