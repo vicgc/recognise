@@ -6,7 +6,7 @@
 // sudo apt-get install mesa-common-dev
 // g++ -o clDeviceQuery -I/opt/intel/opencl-1.2-3.0.67279/include cl.cpp -lOpenCL
 
-int main(int argc, char** argv[]) {
+int main(int argc, char *argv[]) {
     std::vector<cl::Platform> platforms;
     cl::Platform::get(&platforms);
     
