@@ -60,7 +60,7 @@
 using namespace std;
 
 // Haar Cascade file, used for Face Detection.
-const char *faceCascadeFilename = "haarcascade_frontalface_alt.xml";
+const char *faceCascadeFilename = "../classifiers/haarcascade_frontalface_alt.xml";
 
 int SAVE_EIGENFACE_IMAGES = 1;		// Set to 0 if you dont want images of the Eigenvectors saved to files (for debugging).
 //#define USE_MAHALANOBIS_DISTANCE	// You might get better recognition accuracy if you enable this.
@@ -286,7 +286,7 @@ int loadTrainingData(CvMat ** pTrainPersonNumMat)
 	int i;
 
 	// create a file-storage interface
-	fileStorage = cvOpenFileStorage( "facedata.xml", 0, CV_STORAGE_READ );
+	fileStorage = cvOpenFileStorage( "../classifiers/facedata.xml", 0, CV_STORAGE_READ );
 	if( !fileStorage ) {
 		printf("Can't open training database file 'facedata.xml'.\n");
 		return 0;
