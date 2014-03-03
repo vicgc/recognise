@@ -26,6 +26,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
+
+// g++ OnlineFaceRec.cpp `pkg-config --cflags --libs-only-l opencv`
+
 #include <stdio.h>
 #if defined WIN32 || defined _WIN32
 	#include <conio.h>		// For _kbhit() on Windows
@@ -42,7 +45,7 @@
 #include <string>
 //#include <string.h>
 #include <opencv/cv.h>
-#include <cvaux.h>
+#include <opencv/cvaux.h>
 
 //g++ FaceRec.cpp `pkg-config --cflags --libs opencv`
 
