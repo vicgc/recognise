@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # Software License Agreement (BSD License)
 #
 # Copyright (c) 2012, OpenCV <cv[at]g[dot]ke>.
