@@ -50,12 +50,13 @@ r_logger = logging.getLogger('recognise')
 r_logger.setLevel(logging.DEBUG)
 
 # add dev log with syslog
-handler = logging.handlers.SysLogHandler(address = '/dev/log')
+handler = logging.handlers.SysLogHandler(address='/dev/log')
 
 r_logger.addHandler(handler)
 
 r_logger.debug('debug')
 r_logger.critical('critical')
+
 
 def normalize(X, low, high, dtype=None):
     """Normalizes a given array in X to a value between low and high."""
@@ -66,7 +67,7 @@ def normalize(X, low, high, dtype=None):
     X = X - float(minX)
     X = X / float((maxX - minX))
     # scale to [low...high].
-    X = X * (high-low)
+    X = X * (high - low)
     X = X + low
     if dtype is None:
         return np.asarray(X)
@@ -87,13 +88,14 @@ def read_images(path, sz=None):
             y: The corresponding labels (the unique number of the subject, person) in a Python list.
     """
     c = 0
-    X,y = [], []
+    X, y = [], []
     for dirname, dirnames, filenames in os.walk(path):
         for subdirname in dirnames:
             subject_path = os.path.join(dirname, subdirname)
             for filename in os.listdir(subject_path):
                 try:
-                    im = cv2.imread(os.path.join(subject_path, filename), cv2.IMREAD_GRAYSCALE)
+                    im = cv2.imread(os.path.join(
+                        subject_path, filename), cv2.IMREAD_GRAYSCALE)
                     # resize to given size  or by default .. thin image up(if given)
                     if (sz is not None):
                         im = cv2.resize(im, sz)
@@ -104,8 +106,8 @@ def read_images(path, sz=None):
                 except:
                     print "Unexpected error:", sys.exc_info()[0]
                     raise
-            c = c+1
-    return [X,y]
+            c = c + 1
+    return [X, y]
 
 
 if __name__ == "__main__":
@@ -119,7 +121,7 @@ if __name__ == "__main__":
         print "USAGE: facerec_demo.py </path/to/images> [</path/to/store/images/at>]"
         sys.exit()
     # Now read in the image data. This must be a valid path!
-    [X,y] = read_images(sys.argv[1])
+    [X, y] = read_images(sys.argv[1])
     # Convert labels to 32bit integers. This is a workaround for 64bit machines,
     # because the labels will truncated else. This will be fixed in code as
     # soon as possible, so Python users don't need to know about this.
@@ -171,13 +173,14 @@ if __name__ == "__main__":
     # to NumPy is much easier for now.
     # Note: eigenvectors are stored by column:
     for i in xrange(min(len(X), 16)):
-        eigenvector_i = eigenvectors[:,i].reshape(X[0].shape)
+        eigenvector_i = eigenvectors[:, i].reshape(X[0].shape)
         eigenvector_i_norm = normalize(eigenvector_i, 0, 255, dtype=np.uint8)
         # Show or save the images:
         if out_dir is None:
-            cv2.imshow("%s/eigenface_%d" % (out_dir,i), eigenvector_i_norm)
+            cv2.imshow("%s/eigenface_%d" % (out_dir, i), eigenvector_i_norm)
         else:
-            cv2.imwrite("%s/eigenface_%d.png" % (out_dir,i), eigenvector_i_norm)
+            cv2.imwrite(
+                "%s/eigenface_%d.png" % (out_dir, i), eigenvector_i_norm)
     # Show the images:
     if out_dir is None:
         cv2.waitKey(0)
