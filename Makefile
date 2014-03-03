@@ -1,4 +1,4 @@
-# Copyright (C) 2009, 2010, 2011, 2012 Ian <wjuma@students.usiu.ac.ke>
+# Copyright (C) 2013, 2014 Ian <wjuma@students.usiu.ac.ke>
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
