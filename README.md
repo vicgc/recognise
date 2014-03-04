@@ -58,7 +58,7 @@ make test
 
 ###Pattern Recognition
 - object recognition
-- no plate recognition
+- number plate recognition & extraction
 - movement and pattern extraction
 - info extraction on movements
 
