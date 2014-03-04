@@ -62,8 +62,10 @@ using namespace std;
 // Haar Cascade file, used for Face Detection.
 const char *faceCascadeFilename = "../classifiers/haarcascade_frontalface_alt.xml";
 
-int SAVE_EIGENFACE_IMAGES = 1;		// Set to 0 if you dont want images of the Eigenvectors saved to files (for debugging).
-//#define USE_MAHALANOBIS_DISTANCE	// You might get better recognition accuracy if you enable this.
+int SAVE_EIGENFACE_IMAGES = 1;		
+// Set to 0 if you dont want images of the Eigenvectors saved to files (for debugging)
+#define USE_MAHALANOBIS_DISTANCE
+// You might get better recognition accuracy if you enable this
 
 
 // Global variables
@@ -119,8 +121,7 @@ void printUsage()
 
 
 // Startup routine.
-int main( int argc, char** argv )
-{
+int main( int argc, char** argv ) {
 	printUsage();
 
 	if( argc >= 2 && strcmp(argv[1], "train") == 0 ) {
@@ -793,8 +794,7 @@ CvRect detectFaceInImage(const IplImage *inputImg, const CvHaarClassifierCascade
 
 // Re-train the new face rec database without shutting down.
 // Depending on the number of images in the training set and number of people, it might take 30 seconds or so.
-CvMat* retrainOnline(void)
-{
+CvMat* retrainOnline(void) {
 	CvMat *trainPersonNumMat;
 	int i;
 
@@ -835,8 +835,7 @@ CvMat* retrainOnline(void)
 }
 
 // Continuously recognize the person in the camera.
-void recognizeFromCam(void)
-{
+void recognizeFromCam(void) {
 	int i;
 	CvMat * trainPersonNumMat;  // the person numbers during training
 	float * projectedTestFace;
@@ -891,8 +890,7 @@ void recognizeFromCam(void)
 
 	timeFaceRecognizeStart = (double)cvGetTickCount();	// Record the timing.
 
-	while (1)
-	{
+	while (1) {
 		int iNearest, nearest, truth;
 		IplImage *camImg;
 		IplImage *greyImg;
