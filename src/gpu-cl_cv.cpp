@@ -17,7 +17,8 @@ int main(int, char**) {
         
         BOOST_FOREACH(cl::Device device, devices) {
             std::cout << "Device: " << device.getInfo<CL_DEVICE_TYPE>();
-            std::cout << " (" << CL_DEVICE_TYPE_GPU << " means GPU, " << CL_DEVICE_TYPE_CPU << " means CPU)" << std::endl;
+            std::cout << " (" << CL_DEVICE_TYPE_GPU << " means GPU, "
+                << CL_DEVICE_TYPE_CPU << " means CPU)" << std::endl;
         }
     }
 }
