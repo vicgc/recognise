@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////////////
-// Online Face Recognition from a camera using Eigenfaces.
+// Face Recognition from a camera using Eigenfaces.
 //////////////////////////////////////////////////////////////////////////////////////
 //
 // Some parts are based on the code example by Robin Hewitt (2007) at:
@@ -70,11 +70,11 @@ int SAVE_EIGENFACE_IMAGES = 1;		// Set to 0 if you dont want images of the Eigen
 IplImage ** faceImgArr        = 0; // array of face images
 CvMat    *  personNumTruthMat = 0; // array of person numbers
 //#define	MAX_NAME_LENGTH 256		// Give each name a fixed size for easier code.
-//char **personNames = 0;			// array of person names (indexed by the person number). Added by Shervin.
-vector<string> personNames;			// array of person names (indexed by the person number). Added by Shervin.
-int faceWidth = 120;	// Default dimensions for faces in the face recognition database. Added by Shervin.
+//char **personNames = 0;			// array of person names (indexed by the person number).
+vector<string> personNames;			// array of person names (indexed by the person number).
+int faceWidth = 120;	// Default dimensions for faces in the face recognition database.
 int faceHeight = 90;	//	"		"		"		"		"		"		"		"
-int nPersons                  = 0; // the number of people in the training set. Added by Shervin.
+int nPersons                  = 0; // the number of people in the training set.
 int nTrainFaces               = 0; // the number of training images
 int nEigens                   = 0; // the number of eigenvalues
 IplImage * pAvgTrainImg       = 0; // the average image
@@ -108,8 +108,8 @@ CvMat* retrainOnline(void);
 // Show how to use this program from the command-line.
 void printUsage()
 {
-	printf("OnlineFaceRec, created by Shervin Emami (www.shervinemami.co.cc), 2nd Jun 2010.\n"
-		"Usage: OnlineFaceRec [<command>] \n"
+	printf("FaceRecogn\n"
+		"Usage: FaceRecogn [<command>] \n"
 		"  Valid commands are: \n"
 		"    train <train_file> \n"
 		"    test <test_file> \n"
@@ -197,8 +197,7 @@ int main( int argc, char** argv )
 
 
 // Save all the eigenvectors as images, so that they can be checked.
-void storeEigenfaceImages()
-{
+void storeEigenfaceImages() {
 	// Store the average image to a file
 	printf("Saving the image of the average face as 'out_averageImage.bmp'.\n");
 	cvSaveImage("out_averageImage.bmp", pAvgTrainImg);
@@ -233,8 +232,7 @@ void storeEigenfaceImages()
 }
 
 // Train from the data in the given text file, and store the trained data into the file 'facedata.xml'.
-void learn(const char *szFileTrain)
-{
+void learn(const char *szFileTrain) {
 	int i, offset;
 
 	// load training data
@@ -280,8 +278,7 @@ void learn(const char *szFileTrain)
 
 
 // Open the training data from the file 'facedata.xml'.
-int loadTrainingData(CvMat ** pTrainPersonNumMat)
-{
+int loadTrainingData(CvMat ** pTrainPersonNumMat) {
 	CvFileStorage * fileStorage;
 	int i;
 
@@ -292,7 +289,7 @@ int loadTrainingData(CvMat ** pTrainPersonNumMat)
 		return 0;
 	}
 
-	// Load the person names. Added by Shervin.
+	// Load the person names.
 	personNames.clear();	// Make sure it starts as empty.
 	nPersons = cvReadIntByName( fileStorage, 0, "nPersons", 0 );
 	if (nPersons == 0) {
@@ -348,7 +345,7 @@ void storeTrainingData()
 	// create a file-storage interface
 	fileStorage = cvOpenFileStorage( "facedata.xml", 0, CV_STORAGE_WRITE );
 
-	// Store the person names. Added by Shervin.
+	// Store the person names.
 	cvWriteInt( fileStorage, "nPersons", nPersons );
 	for (i=0; i<nPersons; i++) {
 		char varname[200];
@@ -810,8 +807,8 @@ CvMat* retrainOnline(void)
 	}
 	cvFree( &faceImgArr ); // array of face images
 	cvFree( &personNumTruthMat ); // array of person numbers
-	personNames.clear();			// array of person names (indexed by the person number). Added by Shervin.
-	nPersons = 0; // the number of people in the training set. Added by Shervin.
+	personNames.clear();			// array of person names (indexed by the person number).
+	nPersons = 0; // the number of people in the training set.
 	nTrainFaces = 0; // the number of training images
 	nEigens = 0; // the number of eigenvalues
 	cvReleaseImage( &pAvgTrainImg ); // the average image
