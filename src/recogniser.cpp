@@ -18,6 +18,11 @@
 
 // g++ -o recogn recogniser.cpp /opt/intel/opencl-1.2-3.1.1.11385/lib64/ -lOpenCL
 // g++ -o ../bin/frec recogniser.cpp `pkg-config --cflags --libs opencv`
+/*
+../bin/frec
+/home/synod/Desktop/CV/opencv-2.4.8/data/haarcascades/haarcascade_eye.xml
+/home/synod/Desktop/CV/faces_db/orl_faces/s1.csv 0
+*/
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/contrib/contrib.hpp>
