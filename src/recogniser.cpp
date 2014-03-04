@@ -17,6 +17,7 @@
  */
 
 // g++ -o recogn recogniser.cpp /opt/intel/opencl-1.2-3.1.1.11385/lib64/ -lOpenCL
+// g++ -o ../bin/frec recogniser.cpp `pkg-config --cflags --libs opencv`
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/contrib/contrib.hpp>
