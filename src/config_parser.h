@@ -3,8 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "ini.h"
-#include "ini.c"
+#include "inih/ini.h"
+#include "inih/ini.c"
 
 typedef struct {
     int version;
