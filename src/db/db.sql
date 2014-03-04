@@ -1,3 +1,5 @@
+-- postgres db, sql
+
 CREATE ROLE synod SUPERUSER;
 CREATE ROLE admin CREATEDB;
 
