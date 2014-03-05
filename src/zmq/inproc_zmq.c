@@ -12,6 +12,7 @@
 
 static int s_interrupted = 0;
 
+// change val upon signal interruption
 static void s_signal_handler (int signal_value) {
     s_interrupted = 1;
 }
