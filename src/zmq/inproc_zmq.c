@@ -26,8 +26,6 @@ static void s_catch_signals (void) {
     sigaction (SIGTERM, &action, NULL);
 }
 
-
-
 // gcc demo_zmq.c -L/usr/local/lib -lzmq
 
 int main (void) {
