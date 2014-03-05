@@ -5,10 +5,11 @@ using namespace std;
 using namespace pqxx;
 
 int main() {
+   const char * class_recogn;
    const char * sql;
    
    try {
-      connection C("dbname=benchcare user=synod password= \
+      connection C("dbname=recognise user=synod password= \
       hostaddr=127.0.0.1 port=5432");
       if (C.is_open()) {
          cout << "Opened database successfully: " << C.dbname() << endl;
@@ -16,6 +17,16 @@ int main() {
          cout << "Can't open database" << endl;
          return 1;
       }
+
+      class_recogn = "INSERT INTO class_recogn" \
+      "(first_name,last_name,classes_missed,dates_missed,last_time_stamp)" \
+      "VALUES ('Ian', 'Juma', 1, 12, 'Wed Mar  5 10:04:42 2014');";
+
+      // import datetime.datetime
+      // date = datetime.utcnow()
+      // datetime.ctime(date)
+
+
       /* Create SQL statement */
       sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "  \
       "VALUES (1, 'Paul', 32, 'California', 20000.00 ); " \
@@ -30,7 +41,7 @@ int main() {
       work W(C);
       
       /* Execute SQL query */
-      W.exec( sql );
+      W.exec( class_recogn );
       W.commit();
       cout << "Records created successfully" << endl;
       C.disconnect ();
