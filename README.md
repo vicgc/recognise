@@ -16,7 +16,7 @@ make
 sudo make install
 ```
 
-#### get gpu and cpu info
+#### get gpu and cpu info - openCL integration
 ```
 lspci | grep VGA
 cat /proc/cpuinfo | grep sse3
