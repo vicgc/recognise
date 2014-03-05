@@ -4,7 +4,7 @@ before_install:
   - echo "START"
   - sudo apt-get update
   - sudo apt-get install build-essential
-  - ./get-deps.sh
+  - ./get-cl.sh
   - chmod +x get-deps.sh
 
 before_script:
