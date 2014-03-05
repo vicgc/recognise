@@ -9,8 +9,9 @@
 *   http://www.packtpub.com/cool-projects-with-opencv/book
 ******************************************************************************
 
-This code is sample code to understand how automatic license plate recognition (ANPR) works. It is not for production tasks.
-You can use this code as a sample & guide to create your own custom ANPR or OCR applications.
+This code is sample code to understand how automatic license plate recognition (ANPR) works.
+It is not yet ready for production tasks. You can use this code as a sample & guide to create your
+own custom ANPR or OCR applications.
 
 
 ----------------------------------------------------------
