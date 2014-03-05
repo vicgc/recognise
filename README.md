@@ -3,8 +3,6 @@ Recognise
 
 [![BuildStatus](https://travis-ci.org/synod32/recognise.png)](https://travis-ci.org/ianjuma/recognise)
 
-### This project has moved!
-
 Facial detection and recognition using OpenCV and libfacerec
 
 This is a basic template for my project - modules yet to be written
