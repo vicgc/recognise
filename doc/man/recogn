@@ -1,12 +1,19 @@
 .\" Manpage for recogn
-.\" Contact wjuma@students.usiu.ac.ke to correct errors or typos.
+.\" email wjuma@students.usiu.ac.ke to correct errors or typos.
 .TH man 8 "01 Jan 2014" "0.1" "recogn man page"
-.SH NAME
+.SH NAME 
+recognise
 .SH SYNOPSIS
+recognise --flag
+recognise --help -> for help menu
+recognise --daemon -> to daemonise the process into a unit file(service)
+recognise --gpu-all -> to use the device + host processors
 .SH DESCRIPTION
+facial recognition and automatic plate recognition with OpenCV
 .SH OPTIONS
 .SH SEE ALSO
 .SH BUGS
 No known bugs.
+email wjuma@students.usiu.ac.ke to submit bug reports
 .SH AUTHOR
 Ian Juma (wjuma@students.usiu.ac.ke)
