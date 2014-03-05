@@ -11,7 +11,7 @@ This is a basic template for my project - modules yet to be written
 
 NB: The project is still in its infancy
 
-** why yes, of-course contribute, open an issue or make a _pull-request_**
+** why yes, of-course contribute, open an issue or make a pull-request**
 
 ####Install openCV and header files
 ```
