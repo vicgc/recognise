@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/synod/Desktop/CV/CV_demos/Chapter5_NumberPlateRecognition
+CMAKE_SOURCE_DIR = /home/synod/Desktop/CV/recognise/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/synod/Desktop/CV/CV_demos/Chapter5_NumberPlateRecognition
+CMAKE_BINARY_DIR = /home/synod/Desktop/CV/recognise/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
