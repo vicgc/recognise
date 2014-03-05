@@ -5,8 +5,7 @@
 #include <iostream>
 #include <zmq.hpp>
 
-void *worker_routine (void *arg)
-{
+void *worker_routine (void *arg) {
     zmq::context_t *context = (zmq::context_t *) arg;
 
     zmq::socket_t socket (*context, ZMQ_REP);
@@ -29,8 +28,7 @@ void *worker_routine (void *arg)
     return (NULL);
 }
 
-int main ()
-{
+int main () {
     //  Prepare our context and sockets
     zmq::context_t context (1);
     zmq::socket_t clients (context, ZMQ_ROUTER);
