@@ -27,6 +27,7 @@ static void s_catch_signals (void) {
 }
 
 // gcc demo_zmq.c -L/usr/local/lib -lzmq
+// valgrind --tool=memcheck --leak-check=full --suppressions=valgrind.supp ./a.out
 
 int main (void) {
 
