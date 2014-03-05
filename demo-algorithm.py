@@ -38,6 +38,10 @@
 # Some underlying scripts like create_csv will not work in other versions, like Python 3.
 # ------------------------------------------------------------------------------------------------
 
+# Run
+# python demo-algorithm.py /home/synod/Desktop/CV/faces_db/orl_faces/
+# /home/synod/Desktop/CV/faces_db/orl_faces
+
 import os
 import sys
 import cv2
