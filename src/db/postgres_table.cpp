@@ -17,9 +17,11 @@ using namespace pqxx;
 
 int main() {
    const char * sql;
+   const char * class_recogn;
+   const char * sec_recogn;
    
    try {
-      connection C("dbname=benchcare user=synod password= \
+      connection C("dbname=recognise user=synod password= \
       hostaddr=127.0.0.1 port=5432");
       if (C.is_open()) {
          cout << "Opened database successfully: " << C.dbname() << endl;
@@ -35,11 +37,30 @@ int main() {
       "ADDRESS        CHAR(50)," \
       "SALARY         REAL );";
 
+      class_recogn = "CREATE TABLE class_recogn(" \
+          "id_no serial NOT NULL," \
+          "first_name varchar(20) NOT NULL," \
+          "last_name varchar(20) NOT NULL," \
+          "classes_missed integer NOT NULL," \
+          "dates_missed varchar(200) NOT NULL," \
+          "last_time_stamp TIMESTAMP," \
+
+          "PRIMARY KEY(id_no));";
+
+      sec_recogn = "CREATE TABLE sec_recogn (" \
+          "id_no serial NOT NULL," \
+          "first_name varchar(20) NOT NULL," \
+          "last_name varchar(20) NOT NULL," \
+          "last_time_stamp TIMESTAMP, " \
+          "zone varchar(20) NOT NULL, "\
+
+          "PRIMARY KEY (id_no));" ;
+
       /* Create a transactional object. */
       work W(C);
       
       /* Execute SQL query */
-      W.exec( sql );
+      W.exec( sec_recogn );
       W.commit();
       cout << "Table created successfully" << endl;
       C.disconnect ();
