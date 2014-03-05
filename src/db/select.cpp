@@ -1,5 +1,5 @@
 #include <iostream>
-#include <pqxx/pqxx> 
+#include <pqxx/pqxx>
 
 using namespace std;
 using namespace pqxx;
