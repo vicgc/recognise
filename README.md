@@ -59,6 +59,13 @@ make test
 - info extraction on movements
 
 
+###Improving accuracy of the recogniser
+- Lighting conditions (webcam)
+- Training with 'realistic' images - good training sets
+- Camera with high fps
+- Camera LED lighting 30m (poe cam)
+
+
 ###Known Bugs :bug:
 - [x] libpq exception
 
