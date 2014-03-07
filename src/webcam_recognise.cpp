@@ -13,8 +13,7 @@ using namespace cv;
 // Grab the next camera frame. Waits until the next frame is ready, and
 // provides direct access to it, so do NOT modify or free the returned image!
 // Will automatically initialize the camera on the first frame.
-IplImage* getCameraFrame(CvCapture* &camera)
-{
+IplImage* getCameraFrame(CvCapture* &camera) {
 	IplImage *frame;
 	int w, h;
 
