@@ -1,13 +1,7 @@
 /*****************************************************************************
 *   Number Plate Recognition using SVM and Neural Networks
 ******************************************************************************
-*   by David Millán Escrivá, 5th Dec 2012
-*   http://blog.damiles.com
-******************************************************************************
-*   Ch5 of the book "Mastering OpenCV with Practical Computer Vision Projects"
-*   Copyright Packt Publishing 2012.
-*   http://www.packtpub.com/cool-projects-with-opencv/book
-*****************************************************************************/
+*/
 
 #ifndef OCR_h
 #define OCR_h
