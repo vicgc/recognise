@@ -1,19 +1,10 @@
 ******************************************************************************
 *   Automatic Number Plate Recognition using SVM and Neural Networks
 ******************************************************************************
-*   by David Millán Escrivá, 5th Dec 2012
-*   http://blog.damiles.com
-******************************************************************************
-*   Ch5 of the book "Mastering OpenCV with Practical Computer Vision Projects"
-*   Copyright Packt Publishing 2012.
-*   http://www.packtpub.com/cool-projects-with-opencv/book
-******************************************************************************
 
-This code is sample code to understand how automatic license plate recognition (ANPR) works.
+This code is to understand how automatic license plate recognition (ANPR) works.
 It is not yet ready for production tasks. You can use this code as a sample & guide to create 
 your own custom ANPR or OCR applications.
-
-
 ----------------------------------------------------------
 Building the project using CMake from the command-line:
 ----------------------------------------------------------
@@ -31,4 +22,4 @@ Running the project:
 
 You can choose other images that are in the test folder or other images that contain a spanish
 license plate taken from 2 to 3 meters. There are also some UNIX Bash scripts in the "utils"
-folder for Linux or Mac, that need Cygwin to run on Windows.
+folder for Linux or Mac.
