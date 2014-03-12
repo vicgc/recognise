@@ -62,11 +62,11 @@ int main ( int argc, char** argv )
     string filename_whithoutExt=getFilename(filename);
     cout << "working with file: "<< filename_whithoutExt << "\n";
     //Detect posibles plate regions
-    DetectRegions detectRegions;    
+    DetectRegions detectRegions; 
     detectRegions.setFilename(filename_whithoutExt);
     detectRegions.saveRegions=false;
     detectRegions.showSteps=false;
-    vector<Plate> posible_regions= detectRegions.run( input_image );    
+    vector<Plate> posible_regions= detectRegions.run( input_image );
 
     //SVM for each plate region to get valid car plates
     //Read file storage.
@@ -92,8 +92,7 @@ int main ( int argc, char** argv )
 
     //For each possible plate, classify with svm if it's a plate or no
     vector<Plate> plates;
-    for(int i=0; i< posible_regions.size(); i++)
-    {
+    for(int i=0; i< posible_regions.size(); i++) {
         Mat img=posible_regions[i].plateImg;
         Mat p= img.reshape(1, 1);
         p.convertTo(p, CV_32FC1);
@@ -105,11 +104,11 @@ int main ( int argc, char** argv )
 
     cout << "Num plates detected: " << plates.size() << "\n";
     //For each plate detected, recognize it with OCR
-    OCR ocr("OCR.xml");    
+    OCR ocr("OCR.xml");
     ocr.saveSegments=true;
     ocr.DEBUG=false;
     ocr.filename=filename_whithoutExt;
-    for(int i=0; i< plates.size(); i++){
+    for(int i=0; i< plates.size(); i++) {
         Plate plate=plates[i];
         
         string plateNumber=ocr.run(&plate);
