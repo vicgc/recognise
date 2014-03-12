@@ -117,3 +117,5 @@ make test
 [driver camera](http://www.raspberrypi.org/archives/5580)
 
 [The openCL book](http://www.fixstars.com/en/opencl/book/OpenCLProgrammingBook/calling-the-kernel/)
+
+[openCVL in action](http://pdf.th7.cn/down/files/1312/opencl_in_action.pdf)
