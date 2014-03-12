@@ -23,14 +23,14 @@ const float UNKNOWN_PERSON_THRESHOLD = 0.7f;
 
 
 // Cascade Classifier file, used for Face Detection.
-const char *faceCascadeFilename = "lbpcascade_frontalface.xml";     // LBP face detector.
+const char *faceCascadeFilename = "/home/synod/Desktop/CV/recognise/classifiers/lbpcascade_frontalface.xml";     // LBP face detector.
 //const char *faceCascadeFilename = "haarcascade_frontalface_alt_tree.xml";  // Haar face detector.
 //const char *eyeCascadeFilename1 = "haarcascade_lefteye_2splits.xml";   // Best eye detector for open-or-closed eyes.
 //const char *eyeCascadeFilename2 = "haarcascade_righteye_2splits.xml";   // Best eye detector for open-or-closed eyes.
 //const char *eyeCascadeFilename1 = "haarcascade_mcs_lefteye.xml";       // Good eye detector for open-or-closed eyes.
 //const char *eyeCascadeFilename2 = "haarcascade_mcs_righteye.xml";       // Good eye detector for open-or-closed eyes.
-const char *eyeCascadeFilename1 = "haarcascade_eye.xml";               // Basic eye detector for open eyes only.
-const char *eyeCascadeFilename2 = "haarcascade_eye_tree_eyeglasses.xml"; // Basic eye detector for open eyes if they might wear glasses.
+const char *eyeCascadeFilename1 = "/home/synod/Desktop/CV/recognise/classifiers/haarcascade_eye.xml";               // Basic eye detector for open eyes only.
+const char *eyeCascadeFilename2 = "/home/synod/Desktop/CV/recognise/classifiers/haarcascade_eye_tree_eyeglasses.xml"; // Basic eye detector for open eyes if they might wear glasses.
 
 
 // Set the desired face dimensions. Note that "getPreprocessedFace()" will return a square face.
@@ -46,7 +46,7 @@ const int DESIRED_CAMERA_HEIGHT = 480;
 const double CHANGE_IN_IMAGE_FOR_COLLECTION = 0.3;      // How much the facial image should change before collecting a new face photo for training.
 const double CHANGE_IN_SECONDS_FOR_COLLECTION = 1.0;       // How much time must pass before collecting a new face photo for training.
 
-const char *windowName = "WebcamFaceRec";   // Name shown in the GUI window.
+const char *windowName = "Observer";   // Name shown in the GUI window.
 const int BORDER = 8;  // Border between GUI elements to the edge of the image.
 
 const bool preprocessLeftAndRightSeparately = true;   // Preprocess left & right sides of the face separately, in case there is stronger light on one side.
