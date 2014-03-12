@@ -68,7 +68,7 @@ bool m_debug = false;
 #include "preprocessFace.h"     // Easily preprocess face images, for face recognition.
 #include "recognition.h"     // Train the face recognition system and recognize a person from an image.
 
-#include "ImageUtils.h"      // Shervin's handy OpenCV utility functions.
+#include "ImageUtils.h"      // handy OpenCV utility functions.
 
 using namespace cv;
 using namespace std;
@@ -615,7 +615,6 @@ int main(int argc, char *argv[])
     CascadeClassifier eyeCascade2;
     VideoCapture videoCapture;
 
-    cout << "WebcamFaceRec, by Shervin Emami (www.shervinemami.info), June 2012." << endl;
     cout << "Realtime face detection + face recognition from a webcam using LBP and Eigenfaces or Fisherfaces." << endl;
     cout << "Compiled with OpenCV version " << CV_VERSION << endl << endl;
 

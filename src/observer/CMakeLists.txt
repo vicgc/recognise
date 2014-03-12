@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6) 
 
-PROJECT(WebcamFaceRec)
+PROJECT(Observer)
 
 # Requires OpenCV v2.4.1 or later
 FIND_PACKAGE( OpenCV REQUIRED )
