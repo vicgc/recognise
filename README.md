@@ -62,7 +62,7 @@ make test
 ###Improving accuracy of the recogniser
 - Lighting conditions (webcam)
 - Training with 'realistic' images - good training sets
-- Camera with high fps
+- Camera with high fps - hd
 - Camera LED lighting 30m (poe cam)
 
 
