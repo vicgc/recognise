@@ -11,6 +11,7 @@ Why yes, of-course contribute, open an issue or make a pull-request
 
 ####Install openCV and header files
 ```
+./setup-debian.sh
 make get-deps
 make
 sudo make install
