@@ -1,5 +1,6 @@
 #! /bin/bash
-# script to get the deps - openCV, openCL and libs
+# script to get the deps - openCV, openCL
+# and libcv - deps
 
 version="$(wget -q -O - http://sourceforge.net/projects/opencvlibrary/files/opencv-unix | egrep -m1 -o '\"[0-9](\.[0-9])+' | cut -c2-)"
 echo "Installing OpenCV" $version
