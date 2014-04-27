@@ -17,7 +17,7 @@ CC	    = $(shell which clang-3.3)
 LIBFLAGS    = -lm
 THREADFLAGS = -pthread
 DEPS = `pkg-config --cflags --libs opencv`
-OPTFLAGS    = -g -o0
+OPTFLAGS    = -g -o0 -W
 LINTFLAGS   = -Wall -pedantic
 CFLAGS	    = $(THREADFLAGS) $(LINTFLAGS) -std=c99
 
