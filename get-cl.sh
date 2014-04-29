@@ -20,6 +20,11 @@ function fake() {
     fakeroot alien --to-deb opencl-1.2-intel-cpu-3.1.1.11385-1.x86_64.rpm
 }
 
-sudo dpkg -i opencl-1.2-base-3.1.1.11385-1.x86_64.deb
-sudo ln -s /usr/lib64/libOpenCL.so /usr/lib/libOpenCL.so
-sudo ldconfig
+function setDeps() {
+    sudo dpkg -i opencl-1.2-base-3.1.1.11385-1.x86_64.deb
+    sudo ln -s /usr/lib64/libOpenCL.so /usr/lib/libOpenCL.so
+    sudo ldconfig
+}
+
+fake
+setDeps
