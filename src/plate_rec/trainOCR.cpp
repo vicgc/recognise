@@ -36,11 +36,6 @@ int main ( int argc, char** argv )
         return 0;
     }        
 
-
-
-
-
-
     Mat classes;
     Mat trainingDataf5;
     Mat trainingDataf10;
