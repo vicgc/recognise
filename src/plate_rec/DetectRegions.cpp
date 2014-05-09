@@ -9,12 +9,12 @@ void DetectRegions::setFilename(string s) {
         filename=s;
 }
 
-DetectRegions::DetectRegions(){
+DetectRegions::DetectRegions() {
     showSteps=false;
     saveRegions=false;
 }
 
-bool DetectRegions::verifySizes(RotatedRect mr){
+bool DetectRegions::verifySizes(RotatedRect mr) {
 
     float error=0.4;
     //Spain car plate size: 52x11 aspect 4,7272
@@ -31,7 +31,7 @@ bool DetectRegions::verifySizes(RotatedRect mr){
     if(r<1)
         r= (float)mr.size.height / (float)mr.size.width;
 
-    if(( area < min || area > max ) || ( r < rmin || r > rmax )){
+    if(( area < min || area > max ) || ( r < rmin || r > rmax )) {
         return false;
     }else{
         return true;
@@ -39,8 +39,7 @@ bool DetectRegions::verifySizes(RotatedRect mr){
 
 }
 
-Mat DetectRegions::histeq(Mat in)
-{
+Mat DetectRegions::histeq(Mat in) {
     Mat out(in.size(), in.type());
     if(in.channels()==3){
         Mat hsv;
@@ -50,7 +49,7 @@ Mat DetectRegions::histeq(Mat in)
         equalizeHist(hsvSplit[2], hsvSplit[2]);
         merge(hsvSplit, hsv);
         cvtColor(hsv, out, CV_HSV2BGR);
-    }else if(in.channels()==1){
+    } else if(in.channels()==1) {
         equalizeHist(in, out);
     }
 
@@ -58,7 +57,7 @@ Mat DetectRegions::histeq(Mat in)
 
 }
 
-vector<Plate> DetectRegions::segment(Mat input){
+vector<Plate> DetectRegions::segment(Mat input) {
     vector<Plate> output;
 
     //convert image to gray
@@ -99,9 +98,9 @@ vector<Plate> DetectRegions::segment(Mat input){
     while (itc!=contours.end()) {
         //Create bounding rect of object
         RotatedRect mr= minAreaRect(Mat(*itc));
-        if( !verifySizes(mr)){
+        if( !verifySizes(mr)) {
             itc= contours.erase(itc);
-        }else{
+        }else {
             ++itc;
             rects.push_back(mr);
         }
@@ -115,7 +114,7 @@ vector<Plate> DetectRegions::segment(Mat input){
             cv::Scalar(255,0,0), // in blue
             1); // with a thickness of 1
 
-    for(int i=0; i< rects.size(); i++){
+    for(int i=0; i< rects.size(); i++) {
 
         //For better rect cropping for each posible box
         //Make floodfill algorithm because the plate has white background
@@ -159,7 +158,7 @@ vector<Plate> DetectRegions::segment(Mat input){
 
         RotatedRect minRect = minAreaRect(pointsInterest);
 
-        if(verifySizes(minRect)){
+        if(verifySizes(minRect)) {
             // rotated rectangle drawing 
             Point2f rect_points[4]; minRect.points( rect_points );
             for( int j = 0; j < 4; j++ )
@@ -191,7 +190,7 @@ vector<Plate> DetectRegions::segment(Mat input){
             cvtColor(resultResized, grayResult, CV_BGR2GRAY); 
             blur(grayResult, grayResult, Size(3,3));
             grayResult=histeq(grayResult);
-            if(saveRegions){ 
+            if(saveRegions) {
                 stringstream ss(stringstream::in | stringstream::out);
                 ss << "tmp/" << filename << "_" << i << ".jpg";
                 imwrite(ss.str(), grayResult);
@@ -205,13 +204,9 @@ vector<Plate> DetectRegions::segment(Mat input){
     return output;
 }
 
-vector<Plate> DetectRegions::run(Mat input){
-    
+vector<Plate> DetectRegions::run(Mat input) {
     //Segment image by white 
     vector<Plate> tmp=segment(input);
-
     //return detected and posibles regions
     return tmp;
 }
-
-
