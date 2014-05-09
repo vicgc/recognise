@@ -16,7 +16,7 @@
 using namespace std;
 using namespace cv;
 
-class Plate{
+class Plate {
     public:
         Plate();
         Plate(Mat img, Rect pos);
