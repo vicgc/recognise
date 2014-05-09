@@ -18,7 +18,7 @@
 using namespace std;
 using namespace cv;
 
-class DetectRegions{
+class DetectRegions {
     public:
         DetectRegions();
         string filename;
