@@ -85,6 +85,7 @@ make test
 - [ ] management console, logging
 - [ ] notifications (RESTfull) - service hooks
 - [x] postgres integration
+- [ ] some graphs on neo4j - gremlin+cypher
 
 
 ###some docs and refs :fr:
