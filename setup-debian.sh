@@ -17,6 +17,10 @@ function check_install {
     fi
 }
 
+function install_libprotobuf {
+    apt-get install libprotobuf-c0-dev
+}
+
 function check_remove {
     if [ -n "`which "$1" 2>/dev/null`" ]
     then
