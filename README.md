@@ -5,7 +5,12 @@ Recognise
 
 Facial detection and recognition using OpenCV and libfacerec
 
-This is a basic template for my project - modules are being written -> The project is in its infancy
+This is a basic template for my class project - modules are being written
+
+```ruby
+require 'know-this'
+puts 'The project is in its infancy!'
+```
 
 Why yes, contribute, open an issue or make a pull-request
 

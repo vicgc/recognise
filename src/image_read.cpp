@@ -20,6 +20,6 @@ int main(int argc, const char** argv) {
 
      waitKey(0);
 
-     destroyWindow("MyWindow");
+     destroyWindow("App");
      return 0;
 }
