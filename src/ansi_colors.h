@@ -13,7 +13,3 @@
 // printf("%sgreen\n", KGRN);
 // printf("%syellow\n", KYEL);
 // printf("%sblue\n", KBLU);
-// printf("%smagenta\n", KMAG);
-// printf("%scyan\n", KCYN);
-// printf("%swhite\n", KWHT);
-// printf("%snormal\n", KNRM);
