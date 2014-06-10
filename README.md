@@ -81,6 +81,8 @@ make test
 - [x] openCL support, cmake OPENCL=ON, intel GPU support
 - [x] Add cmake build, autotools+automake
 - [x] Python CL extension - openMP
+- [ ] Integrate SMS (AfricaIT)
+- [ ] Email notifications Sendgrid
 - [ ] Redis cache + store - zmq
 - [ ] Better logs + elasticsearch on logs
 - [ ] ML and entity classification
