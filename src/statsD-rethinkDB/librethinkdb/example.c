@@ -1,4 +1,8 @@
 #include "librethinkdb.h"
+#include "query_language.pb-c.h"
+#include "query_language.pb-c.c"
+
+int main() {
 
    // connect to the rethinkdb server (addr, port, milliseconds_timeout)
    struct rethinkdb_connection *r = rethinkdb_init("127.0.0.1", 28015, 1000);
@@ -24,3 +28,5 @@
    for(i=0;i<n_items;i++) {
        printf("JSON = %s\n", items[i]);
    }
+
+}
